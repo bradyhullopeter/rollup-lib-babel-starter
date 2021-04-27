@@ -7,12 +7,12 @@ import autoprefixer from "autoprefixer";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
-const name = "ExampleLibOne";
-const input = "src/index.js";
+const isProduction = () => process.env.NODE_ENV === "production";
+
 const plugins = [
   postcss({
     extract: true,
-    minimize: false,
+    minimize: isProduction() ? true : false,
     modules: false,
     use: ["sass"],
     sourceMap: true,
@@ -22,18 +22,17 @@ const plugins = [
   commonjs(),
   babel({
     babelHelpers: "runtime",
-    // skipPreflightCheck: true,
     exclude: /node_modules/,
   }),
-  terser(),
+  isProduction() ? terser() : "",
 ];
 
 export default [
   {
-    input,
+    input: pkg.source,
     external: [],
     output: {
-      name,
+      name: pkg.globalName,
       file: pkg.browser,
       format: "umd",
     },

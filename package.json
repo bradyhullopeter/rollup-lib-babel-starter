@@ -2,8 +2,10 @@
   "name": "example-lib-one",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.js",
+  "main": "lib/example-lib-one.js",
   "browser": "lib/example-lib-one.js",
+  "globalName": "ExampleLibOne",
   "scripts": {
     "build": "rollup -c",
     "dev": "concurrently \"npm:build -- --watch\" \"http-server . -o\"",
