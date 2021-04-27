@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "concurrently \"npm:build -- --watch\" \"http-server . -o\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Brady Hullopeter <Hullopeter.Brady@mayo.edu>",
   "license": "MIT",
@@ -22,10 +22,12 @@
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "autoprefixer": "^10.2.5",
+    "babel-jest": "^26.6.3",
     "browserslist": "^4.16.5",
     "concurrently": "^6.0.2",
     "core-js": "^3.10.0",
     "http-server": "^0.12.3",
+    "jest": "^26.6.3",
     "nanocomponent": "6.5.1",
     "nanohtml": "^1.9.1",
     "postcss": "^8.2.13",
