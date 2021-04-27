@@ -14,7 +14,7 @@ Included:
 
 ## Getting Started
 ```bash
-git clone https://github.com/bradyhullopeter/rollup-lib-babel-starter.git mylib
+degit https://github.com/bradyhullopeter/rollup-lib-babel-starter.git mylib
 ```
 
 ```bash
