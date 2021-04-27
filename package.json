@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm:build -- --watch\" \"http-server . -o\"",
     "test": "jest"
   },
-  "author": "Brady Hullopeter <Hullopeter.Brady@mayo.edu>",
+  "author": "Brady Hullopeter <brady.hullopeter@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.16",
