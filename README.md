@@ -18,7 +18,7 @@ npx degit https://github.com/bradyhullopeter/rollup-lib-babel-starter.git my-lib
 ```
 
 ```bash
-cd mylib
+cd my-lib
 ```
 
 ```bash
