@@ -29,10 +29,6 @@ npm install
 npm run dev
 ```
 
-## Authors
-
-- [@bradyhullopeter](https://github.com/bradyhullopeter)
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
