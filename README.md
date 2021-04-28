@@ -14,7 +14,7 @@ Included:
 
 ## Getting Started
 ```bash
-degit https://github.com/bradyhullopeter/rollup-lib-babel-starter.git my-lib
+npx degit https://github.com/bradyhullopeter/rollup-lib-babel-starter.git my-lib
 ```
 
 ```bash
