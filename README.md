@@ -14,11 +14,11 @@ Included:
 
 ## Getting Started
 ```bash
-degit https://github.com/bradyhullopeter/rollup-lib-babel-starter.git my-lib
+npx degit https://github.com/bradyhullopeter/rollup-lib-babel-starter.git#main my-lib
 ```
 
 ```bash
-cd mylib
+cd my-lib
 ```
 
 ```bash
@@ -28,10 +28,6 @@ npm install
 ```bash
 npm run dev
 ```
-
-## Authors
-
-- [@bradyhullopeter](https://github.com/bradyhullopeter)
 
 ## License
 
