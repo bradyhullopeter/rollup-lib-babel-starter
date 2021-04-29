@@ -14,7 +14,6 @@ export class Button extends Nanocomponent {
     return html` <button class="button-button">Click Me</button> `;
   }
 
-  // Implement conditional rendering
   update(newColor) {
     return newColor !== this.color;
   }

@@ -9,7 +9,7 @@ import pkg from "./package.json";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
-const plugins = [
+const scss = [
   postcss({
     extract: true,
     minimize: isProduction() ? true : false,
@@ -18,6 +18,10 @@ const plugins = [
     sourceMap: true,
     plugins: [autoprefixer],
   }),
+];
+
+const plugins = [
+  ...scss,
   resolve({ preferBuiltins: true, browser: true }),
   commonjs(),
   babel({
@@ -35,7 +39,17 @@ export default [
       name: pkg.globalName,
       file: pkg.browser,
       format: "umd",
+      sourcemap: true,
     },
     plugins: [...plugins, filesize()],
+  },
+  {
+    input: pkg.source,
+    external: ["nanohtml", "nanocomponent"],
+    output: [
+      { file: pkg.main, format: "cjs" },
+      { file: pkg.module, format: "es" },
+    ],
+    plugins: [...scss],
   },
 ];
